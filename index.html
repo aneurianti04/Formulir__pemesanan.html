@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Reservasi Web Wisata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Form Reservasi Web Wisata</h1>
+    <p>Silakan isi formulir untuk memesan paket tur kustom.</p>
+
+    <form>
+
+        <!-- Hidden -->
+        <input type="hidden" name="id_partner" value="TRAVEL2026">
+
+        <h3>Identitas & Keamanan</h3>
+
+        <label>PIN 6 Digit</label>
+        <input type="password"
+               pattern="[0-9]{6}"
+               maxlength="6"
+               placeholder="Masukkan 6 digit PIN"
+               required>
+
+        <label>Lokasi Penjemputan</label>
+        <select required>
+            <option value="">Pilih Provinsi - Kota - Meeting Point</option>
+            <option>DKI Jakarta - Jakarta - Bandara Soekarno Hatta</option>
+            <option>Jawa Barat - Bandung - Stasiun Bandung</option>
+            <option>Jawa Timur - Surabaya - Bandara Juanda</option>
+        </select>
+
+        <h3>Detail Keberangkatan</h3>
+
+        <label>Cari Paket Wisata</label>
+        <input type="search" placeholder="Contoh: Labuan Bajo">
+
+        <label>Tanggal Keberangkatan</label>
+        <input type="date" required>
+
+        <label>Jam Kumpul</label>
+        <input type="time" required>
+
+        <label>Jumlah Peserta (1-20)</label>
+        <input type="number" min="1" max="20" required>
+
+        <h3>Preferensi Personal</h3>
+
+        <label>Link Media Sosial</label>
+        <input type="url" placeholder="https://">
+
+        <label>Warna Seragam Grup</label>
+        <input type="color">
+
+        <h3>Opsi Tambahan</h3>
+
+        <label>Metode Pembayaran</label>
+        <div class="radio-group">
+            <label><input type="radio" name="bayar" required> Full Payment</label>
+            <label><input type="radio" name="bayar"> DP 50%</label>
+        </div>
+
+        <label>Fasilitas Ekstra</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Asuransi Perjalanan</label>
+            <label><input type="checkbox"> Penyewaan Kamera</label>
+            <label><input type="checkbox"> Dinner Romantis</label>
+        </div>
+
+        <label>Upload KTP / Paspor</label>
+        <input type="file" accept=".jpg,.png,.pdf" required>
+
+        <button type="submit">Kirim Reservasi</button>
+
+    </form>
+</div>
+
+</body>
+</html>
